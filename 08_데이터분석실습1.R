@@ -1,5 +1,5 @@
 # 1. marathon_results_2017.csv 파일을 읽어서 marathon_2017 변수에 저장
-marathon_2017 = read.csv("./R_Script/marathon_results_2017.csv", 
+marathon_2017 = read.csv("marathon_results_2017.csv", 
                          stringsAsFactors = FALSE)
 # 2. 행 개수와 열 개수를 파악하고 구조를 출력해봅니다
 # (nrow, ncol, dim, summury, colnames)
