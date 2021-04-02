@@ -61,3 +61,14 @@ marathon_2015_2017_clean[ ,"Official.Time"] =
 # 6. 현재 데이터프레임을 파일로 저장합니다
 # write.csv(데이터프레임이름, '파일명', row.names=FALSE)
 write.csv(marathon_2015_2017_clean, 'marathon_2015_2017.csv', row.names=FALSE)
+
+
+
+
+toSec = function(df, col){
+  df_split = cSplit(df, splitCols = col, sep=":")
+  df_split = as.data.frame(df_split)
+  as.integer(df_split[,paste0(col,"_1")]) *3600 +
+    as.integer(df_split[,paste0(col,"_2")]) *60 +
+    as.integer(df_split[,paste0(col,"_3")])
+}
